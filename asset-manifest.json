@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/racing-post_scraper/static/js/main.b71e6719.chunk.js",
+    "main.js.map": "/racing-post_scraper/static/js/main.b71e6719.chunk.js.map",
+    "runtime~main.js": "/racing-post_scraper/static/js/runtime~main.08802ac3.js",
+    "runtime~main.js.map": "/racing-post_scraper/static/js/runtime~main.08802ac3.js.map",
+    "static/js/2.4dd9fb28.chunk.js": "/racing-post_scraper/static/js/2.4dd9fb28.chunk.js",
+    "static/js/2.4dd9fb28.chunk.js.map": "/racing-post_scraper/static/js/2.4dd9fb28.chunk.js.map",
+    "index.html": "/racing-post_scraper/index.html",
+    "precache-manifest.280381b29d3b59d6528d57e963e07f06.js": "/racing-post_scraper/precache-manifest.280381b29d3b59d6528d57e963e07f06.js",
+    "service-worker.js": "/racing-post_scraper/service-worker.js"
+  }
+}
