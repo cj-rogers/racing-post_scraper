@@ -107,8 +107,8 @@ class Step2 extends React.Component {
                       <th>HORSE</th>
                       <th>AGE</th>
                       <th>WGT</th>
-                      <th colSpan="2">TRAINER <small>Allowance</small></th>
-                      <th colSpan="2">JOCKEY <small>RTF%</small></th>
+                      <th colSpan="2">TRAINER <small>RTF%</small></th>
+                      <th colSpan="2">JOCKEY <small>Allowance</small></th>
                       <th>OR</th>
                       <th>TS</th>
                       <th>RPR</th>
