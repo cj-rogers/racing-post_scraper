@@ -28,12 +28,15 @@ class Step2 extends React.Component {
           for (var i = 0; i < rows.length; i++) {
             let row = {
               no: rows[i].querySelectorAll('.RC-glanceRunner__no')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
-              draw: rows[i].querySelectorAll('.RC-glanceRunner__form')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
+              draw: rows[i].querySelectorAll('.RC-glanceRunner__draw')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
+              form: rows[i].querySelectorAll('.RC-glanceRunner__form')[0].innerHTML.replace(/^\s+|\s+$/, '').trim(),
               horse: rows[i].querySelectorAll('.RC-glanceRunner__name')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               age: rows[i].querySelectorAll('.RC-glanceRunner__age')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
-              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
+              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].innerHTML.replace(/^\s+|\s+$/, '').trim(),
               jockey: rows[i].querySelectorAll('.RC-glanceRunner__team_jockey .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               trainer: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
+              rtf: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamCount')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
+              allowance: rows[i].querySelectorAll('.RC-glanceRunner__team_jockey .RC-glanceRunner__teamCount')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               or: rows[i].querySelectorAll('.RC-glanceRunner__or')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               ts: rows[i].querySelectorAll('.RC-glanceRunner__ts')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               rpr: rows[i].querySelectorAll('.RC-glanceRunner__rpr')[0].innerText.replace(/^\s+|\s+$/, '').trim()
@@ -64,11 +67,14 @@ class Step2 extends React.Component {
       <tr key={index}>
         <td>{row.no}</td>
         <td>{row.draw}</td>
+        <td dangerouslySetInnerHTML={{__html: row.form}} />
         <td>{row.horse}</td>
         <td>{row.age}</td>
-        <td>{row.wgt}</td>
+        <td dangerouslySetInnerHTML={{__html: row.wgt}} />
+        <td>{row.trainer}</td>
+        <td>{row.rtf}</td>
         <td>{row.jockey}</td>
-        <td>{row.trainer}</td>  
+        <td>{row.allowance}</td>
         <td>{row.or}</td>
         <td>{row.ts}</td>
         <td>{row.rpr}</td>
@@ -96,13 +102,13 @@ class Step2 extends React.Component {
                 <Table striped bordered hover size="sm">
                   <thead>
                     <tr>
-                      <th>NO.</th>
+                      <th colSpan="2">NO.</th>
                       <th>DRAW</th>
                       <th>HORSE</th>
                       <th>AGE</th>
                       <th>WGT</th>
-                      <th>JOCKEY</th>
-                      <th>TRAINER</th>  
+                      <th colSpan="2">TRAINER <small>Allowance</small></th>
+                      <th colSpan="2">JOCKEY <small>RTF%</small></th>
                       <th>OR</th>
                       <th>TS</th>
                       <th>RPR</th>
