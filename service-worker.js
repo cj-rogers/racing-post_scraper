@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/racing-post_scraper/precache-manifest.280381b29d3b59d6528d57e963e07f06.js"
+  "/racing-post_scraper/precache-manifest.ac828bf2ed4c722e1e181392125c4d2a.js"
 );
 
 self.addEventListener('message', (event) => {
