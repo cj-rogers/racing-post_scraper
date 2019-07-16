@@ -32,7 +32,7 @@ class Step2 extends React.Component {
               form: rows[i].querySelectorAll('.RC-glanceRunner__form')[0].innerHTML.replace(/^\s+|\s+$/, '').trim(),
               horse: rows[i].querySelectorAll('.RC-glanceRunner__name')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               age: rows[i].querySelectorAll('.RC-glanceRunner__age')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
-              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].innerHTML.replace(/^\s+|\s+$/, '').trim(),
+              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].innerText.replace(/^\s+|\s+$/, '').replace('-', '&dash;').trim(),
               jockey: rows[i].querySelectorAll('.RC-glanceRunner__team_jockey .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               trainer: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               rtf: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamCount')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
