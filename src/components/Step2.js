@@ -42,6 +42,10 @@ class Step2 extends React.Component {
               rpr: rows[i].querySelectorAll('.RC-glanceRunner__rpr')[0].innerText.replace(/^\s+|\s+$/, '').trim()
             };
 
+            if (row.form.length > 3) {
+              row.form = row.form.substr(row.form.length - 3, 3);
+            }
+
             data.push(row);
           }
 
