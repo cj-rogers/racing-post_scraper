@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/racing-post_scraper/static/js/main.c49d98c7.chunk.js",
-    "main.js.map": "/racing-post_scraper/static/js/main.c49d98c7.chunk.js.map",
+    "main.js": "/racing-post_scraper/static/js/main.2e1bc461.chunk.js",
+    "main.js.map": "/racing-post_scraper/static/js/main.2e1bc461.chunk.js.map",
     "runtime~main.js": "/racing-post_scraper/static/js/runtime~main.08802ac3.js",
     "runtime~main.js.map": "/racing-post_scraper/static/js/runtime~main.08802ac3.js.map",
     "static/js/2.4dd9fb28.chunk.js": "/racing-post_scraper/static/js/2.4dd9fb28.chunk.js",
     "static/js/2.4dd9fb28.chunk.js.map": "/racing-post_scraper/static/js/2.4dd9fb28.chunk.js.map",
     "index.html": "/racing-post_scraper/index.html",
-    "precache-manifest.2d166aac27873f9bc40d957b784bb2f9.js": "/racing-post_scraper/precache-manifest.2d166aac27873f9bc40d957b784bb2f9.js",
+    "precache-manifest.289b67db6c706be35cd0969b6826a8be.js": "/racing-post_scraper/precache-manifest.289b67db6c706be35cd0969b6826a8be.js",
     "service-worker.js": "/racing-post_scraper/service-worker.js"
   }
 }
