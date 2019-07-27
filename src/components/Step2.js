@@ -29,10 +29,10 @@ class Step2 extends React.Component {
             let row = {
               no: rows[i].querySelectorAll('.RC-glanceRunner__no')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               draw: rows[i].querySelectorAll('.RC-glanceRunner__draw')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
-              form: rows[i].querySelectorAll('.RC-glanceRunner__form')[0].innerHTML.replace(/^\s+|\s+$/, '').trim(),
+              form: rows[i].querySelectorAll('.RC-glanceRunner__form')[0].innerText.replace(/\D/g, '').trim(),
               horse: rows[i].querySelectorAll('.RC-glanceRunner__name')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               age: rows[i].querySelectorAll('.RC-glanceRunner__age')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
-              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].innerText.replace(/^\s+|\s+$/, '').replace('-', '&dash;').trim(),
+              wgt: rows[i].querySelectorAll('.RC-glanceRunner__wgt')[0].dataset.orderWgt,
               jockey: rows[i].querySelectorAll('.RC-glanceRunner__team_jockey .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               trainer: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamName')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               rtf: rows[i].querySelectorAll('.RC-glanceRunner__team_trainer .RC-glanceRunner__teamCount')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
@@ -41,6 +41,8 @@ class Step2 extends React.Component {
               ts: rows[i].querySelectorAll('.RC-glanceRunner__ts')[0].innerText.replace(/^\s+|\s+$/, '').trim(),
               rpr: rows[i].querySelectorAll('.RC-glanceRunner__rpr')[0].innerText.replace(/^\s+|\s+$/, '').trim()
             };
+
+            row.wgt = `${Math.trunc(row.wgt / 14)} ${row.wgt % 14}`;
 
             if (row.form.length > 3) {
               row.form = row.form.substr(row.form.length - 3, 3);
