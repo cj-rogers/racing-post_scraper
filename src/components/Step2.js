@@ -14,7 +14,7 @@ class Step2 extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`https://api.codetabs.com/v1/proxy?quest=${this.props.url}`)
+    fetch(`https://cors-anywhere.herokuapp.com/${this.props.url}`)
       .then(res => res.text())
       .then(
         (result) => {
